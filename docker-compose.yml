@@ -1,7 +1,11 @@
 version: '3.8'
 services:
   frontend:
-    image: antoninoedaiana-fe
-    container_name: frontend
+    build: .
     ports:
       - "8080:80"
+    volumes:
+      - aed-fe:/var/www/html
+# Names the volume
+volumes:
+  aed-fe:
