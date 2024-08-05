@@ -39,7 +39,7 @@ export const submitForm = (() => {
 
         // Use the request function
         try {
-            const responseData = await request('https://antoninoedaiana.it:3001', '/api/invitations/' + encodeURIComponent(inviteCode.value));
+            const responseData = await request('https://antoninoedaiana.it', '/api/invitations/' + encodeURIComponent(inviteCode.value));
             if (responseData) {
                 const dataDisplayElement = document.getElementById('dataDisplay');
                 const submitFormButton = document.getElementById('submit-form-button');
@@ -441,7 +441,7 @@ function sendDataToAPI(comment, guestsData) {
 
     const inviteCode = owns.get('inviteCode');
 
-    fetch('https://antoninoedaiana.it:3001/api/invitations/' + encodeURIComponent(inviteCode), {
+    fetch('https://antoninoedaiana.it/api/invitations/' + encodeURIComponent(inviteCode), {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
