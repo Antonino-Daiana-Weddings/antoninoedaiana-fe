@@ -10,7 +10,7 @@ export const submitForm = (() => {
     const request = async (baseUrl, path) => {
         const response = await fetch(baseUrl + path);
         if (!response.ok) {
-            if (response.status === 404) {
+            if (response.status === 404 || response.status === 400) {
                 // Specific handling for 404 status
                 const errorBox = document.getElementById('informationBox');
                 if (errorBox) {
