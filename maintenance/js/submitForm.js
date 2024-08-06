@@ -66,6 +66,7 @@ export const submitForm = (() => {
                 const comment = responseData.comment;
                 const guests = responseData.guests;
 
+                console.log('Comment:', comment);
                 // Save guests for future use
                 owns.set('guests', guests);
 
