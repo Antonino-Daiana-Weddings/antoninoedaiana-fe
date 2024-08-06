@@ -318,13 +318,14 @@ function createFormElement(guest, index) {
     const label4 = document.createElement('label');
     label4.setAttribute("for", `help-${index}`);
     label4.className = "form-label";
-    label4.textContent = "Necessiti assistenza con il trasporto o pernottamento?";
+    label4.textContent = "Necessiti assistenza con il pernottamento?";
     div2_3.appendChild(label4);
 
     const select4 = document.createElement('select');
     select4.className = "form-select";
     select4.id = `help-${index}`;
-    ["Autonomous:Sono autonomo", "Bus-Only:Bus", "Hotel-Only:Hotel", "Bus-And-Hotel:Bus e Hotel"].forEach(option => {
+    // ["Autonomous:Sono autonomo", "Bus-Only:Bus", "Hotel-Only:Hotel", "Bus-And-Hotel:Bus e Hotel"].forEach(option => {
+    ["Autonomous:Sono autonomo", "Hotel-Only:Sì"].forEach(option => {
         const [value, text] = option.split(':');
         const opt = document.createElement('option');
         opt.value = value;
