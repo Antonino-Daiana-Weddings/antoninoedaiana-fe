@@ -290,7 +290,7 @@ function createFormElement(guest, index) {
     const label3 = document.createElement('label');
     label3.setAttribute("for", `kid-${index}`);
     label3.className = "form-label";
-    label3.textContent = "Menù bimbo";
+    label3.textContent = `Gradisci il menù bambino per ${guest.fullName}?`;
     div2_2.appendChild(label3);
 
     const select3 = document.createElement('select');
