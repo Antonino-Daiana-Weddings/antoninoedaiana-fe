@@ -394,7 +394,8 @@ function createFormElement(guest, index) {
         checkboxesContainer.appendChild(checkbox2);
         checkboxesContainer.appendChild(label2);
 
-        div2_4.appendChild(checkbox);
+        //div2_4.appendChild(checkbox);
+        div2.appendChild(checkbox);
         div2.appendChild(div2_4);
         }
     }
