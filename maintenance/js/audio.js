@@ -49,11 +49,9 @@ export const audio = (() => {
         }
     };
     
-    // Add the event listener for visibility change
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    
     return {
         play: () => getAudio().play(),
+        handleVisibilityChange,
         button,
         showButton,
     };

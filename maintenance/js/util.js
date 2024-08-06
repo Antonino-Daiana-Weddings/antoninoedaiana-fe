@@ -201,6 +201,9 @@ export const util = (() => {
     // };
 
     const open = async (button) => {
+        // Add the event listener for visibility change
+        document.addEventListener('visibilitychange', audio.handleVisibilityChange);
+     
         button.disabled = true;
         confetti({
             origin: { y: 1 },
