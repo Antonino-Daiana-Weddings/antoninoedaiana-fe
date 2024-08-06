@@ -238,7 +238,7 @@ function createFormElement(guest, index) {
     const label1 = document.createElement('label');
     label1.setAttribute("for", `attend-${index}`);
     label1.className = "form-label";
-    label1.textContent = `${guest.fullName}, ci sarai?`;
+    label1.textContent = `Ci sarai?`;
     div1.appendChild(label1);
 
     const select1 = document.createElement('select');
