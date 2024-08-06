@@ -346,6 +346,7 @@ function createFormElement(guest, index) {
         label5.className = "form-label mt-3";
         label5.textContent = "Per quali notti ti serve l'albergo?";
         div2_4.appendChild(label5);
+
     
         const checkbox = document.createElement('checkbox');
         checkbox.className = "form-checkbox";
@@ -395,8 +396,13 @@ function createFormElement(guest, index) {
         checkboxesContainer.appendChild(checkbox2);
         checkboxesContainer.appendChild(label2);
 
+        const div2_4_1 = document.createElement('div');
+        div2_4_1.className = "mt-3";
+        div2_4_1.id = `checkbox-wrapper`;
+        div2_4_1.appendChild(checkboxesContainer);
+
         //Stessa riga della domanda
-        div2_4.appendChild(checkbox);
+        div2_4.appendChild(div2_4_1);
         div2.appendChild(div2_4);
         }
     }
