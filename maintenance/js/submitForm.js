@@ -395,11 +395,8 @@ function createFormElement(guest, index) {
         checkboxesContainer.appendChild(label2);
 
         //Stessa riga della domanda
-        //div2_4.appendChild(checkbox);
-
+        div2_4.appendChild(checkbox);
         div2.appendChild(div2_4);
-        // checkbox a capo
-        div2.appendChild(checkbox);
         }
     }
 
