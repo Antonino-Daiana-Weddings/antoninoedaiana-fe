@@ -89,7 +89,7 @@ export const submitForm = (() => {
                 });
 
                 const commentElement = document.getElementById('comments');
-                commentElement.textContent = comment;
+                commentElement.value = comment;
             } else {
                 // Handle null response (e.g., error case)
                 console.log('No data returned');
