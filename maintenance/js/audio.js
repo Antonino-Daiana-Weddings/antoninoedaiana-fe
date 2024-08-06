@@ -35,6 +35,23 @@ export const audio = (() => {
         music.style.display = 'block';
     };
 
+    const handleVisibilityChange = () => {
+        if (document.hidden) {
+            // Pause the audio when the document is hidden
+            if (audio) {
+                audio.pause();
+            }
+        } else {
+            // Play the audio when the document becomes visible again
+            if (audio) {
+                audio.play();
+            }
+        }
+    };
+    
+    // Add the event listener for visibility change
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
     return {
         play: () => getAudio().play(),
         button,
