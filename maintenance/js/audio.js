@@ -36,6 +36,7 @@ export const audio = (() => {
     };
 
     const handleVisibilityChange = () => {
+        console.log("Visibility change");
         if (document.hidden) {
             // Pause the audio when the document is hidden
             if (audio) {
