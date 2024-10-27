@@ -98,28 +98,28 @@ export const util = (() => {
         }, 1000);
     };
 
-    // const countDownDate2 = () => {
-    //     const until = document.getElementById('count-down2').getAttribute('data-time').replace(' ', 'T');
-    //     const count = (new Date(until)).getTime();
+    const countDownDate2 = () => {
+        const until = document.getElementById('count-down2').getAttribute('data-time').replace(' ', 'T');
+        const count = (new Date(until)).getTime();
     
-    //     const intervalId = setInterval(() => {
-    //         const now = new Date().getTime();
-    //         const distance = count - now;
+        const intervalId = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = count - now;
     
-    //         if (distance <= 0) {
-    //             clearInterval(intervalId);
-    //             document.getElementById('day2').innerText = 0;
-    //             document.getElementById('hour2').innerText = 0;
-    //             document.getElementById('minute2').innerText = 0;
-    //             //document.getElementById('second2').innerText = 0;
-    //         } else {
-    //             document.getElementById('day2').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //             document.getElementById('hour2').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //             document.getElementById('minute2').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //             //document.getElementById('second2').innerText = Math.floor((distance % (1000 * 60)) / 1000);
-    //         }
-    //     }, 1000);
-    // };
+            if (distance <= 0) {
+                clearInterval(intervalId);
+                document.getElementById('day2').innerText = 0;
+                document.getElementById('hour2').innerText = 0;
+                document.getElementById('minute2').innerText = 0;
+                //document.getElementById('second2').innerText = 0;
+            } else {
+                document.getElementById('day2').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                document.getElementById('hour2').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('minute2').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                //document.getElementById('second2').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+    };
 
     const copy = async (button, message, timeout = 3000) => {
         try {
@@ -221,7 +221,7 @@ export const util = (() => {
         AOS.init();
 
         countDownDate();
-//        countDownDate2();
+        countDownDate2();
         opacity('welcome', 0.025);
 
         audio.play();
