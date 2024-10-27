@@ -487,14 +487,58 @@
                         Venite anche <span style="color:#ce2c2c"><b>Voi</b></span>?
                     </h1>
                     <p style="font-size: 0.9rem;">
-                        Il tempo massimo per la conferma, il <b>20 ottobre 2024</b>, è stato superato.<br>
-                        Da questo momento è necessario contattare gli sposi per qualsiasi modifica.
+                        È richiesta una gentile conferma entro il <b>20 ottobre 2024</b>.<br>
+                        Il tempo residuo per dare la tua conferma è il seguente:
                     </p>
+                    <div class="border rounded-pill shadow py-2 px-2 mx-2 mb-4">
 
+                        <!-- Sostituisci l'ora con data-time (secondo quel formato) -->
+                        <div class="row justify-content-center" data-time="2024-10-20 23:59:59" id="count-down2">
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="day2">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Giorni</small>
+                            </div>
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="hour2">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Ore</small>
+                            </div>
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="minute2">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Minuti</small>
+                            </div>
+                            <!-- <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="second2">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Secondi</small>
+                            </div> -->
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem;" id="insert-code-text">
+                        Inserisci il codice ricevuto con l'invito per confermare la tua presenza e quella dei tuoi cari.
+                    </p>
+                    
                     <div id="informationBox" class="alert alert-info alert-dismissible fade show" role="alert" style="display: none;">
                         <p style="font-size: 1.5rem;">Attenzione!</p>
                         <p class="m-0">Hai inserito un codice invito non valido.</p>
                         <button type="button" class="btn-close" aria-label="Close" onclick="util.close()"></button>
+                    </div>
+                    <div class="mb-3" id="input-code-form">
+                        <label for="form-invite-code" class="form-label"><b>Codice invito</b></label>
+                        <input type="text" class="form-control shadow-sm" id="form-invite-code" placeholder="123456">
+                    </div>
+
+                    <div class="mb-1 text-center" id="dataDisplay" style="display: none; visibility: hidden;">
+                        <h1 class="font-esthetic" data-aos="fade-up" data-aos-duration="2000" style="font-size: 3rem; color: #ce2c2c;" id="invitationName"></h1>
+                        
+                        <p style="font-size: 0.9rem;" id="infoMessage">
+                            Indica di seguito per ogni tuo caro la partecipazione. Potrai specificare anche eventuali allergie o intolleranze alimentari.
+                            Facci anche sapere se avrai bisogno di aiuto con la sistemazione in albergo.
+                        </p>
+
+                        <div class="mb-1 text-center justify-content-between" id="guestFormsContainer"></div>
+                        <div class="mb-1"><textarea class="form-control" id="comments" rows="3" placeholder="Inserisci qui eventuali note aggiuntive..."></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-primary" id="sendConfirmation" onclick="submitForm.sendAllForms()">Invia</button>
+                        </div>
+                    </div>
+                    <div class="mb-1 text-center">
+                        <h1 class="font-esthetic" style="font-size: 3rem; color: #ce2c2c;" id="thanksMessage"></h1>
                     </div>
 
                     <!-- <div class="mb-3">
@@ -520,6 +564,12 @@
                         </div>
                         <textarea class="form-control shadow-sm" id="form-comment" rows="4" placeholder="Tulis Ucapan dan Doa"></textarea>
                     </div> -->
+
+                    <div class="d-grid" id="submit-form-button">
+                        <button id="submitForm" class="btn btn-primary btn-sm rounded-3 shadow m-1" onclick="submitForm.send(this)">
+                            <i class="fa-solid fa-paper-plane me-1"></i>Vai alla conferma
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
